@@ -1,9 +1,29 @@
 <launch>
 
-  <node pkg="dummy_vlm" type="dummyVLM" name="dummyVLM" output="screen" required="true">
+  <!-- <node pkg="dummy_vlm" type="dummyVLM" name="dummyVLM" output="screen" required="true">
     <param name="waypoint_file_dir" type="string" value="$(find dummy_vlm)/data/waypoints.ply" />
     <param name="object_list_file_dir" type="string" value="$(find dummy_vlm)/data/object_list.txt" />
     <param name="waypointReachDis" type="double" value="1.0" />
+  </node> -->
+
+  <!-- <node name="octomap_server" pkg="octomap_server" type="octomap_server_node" output="screen">
+    <param name="frame_id" value="map"/>
+    <param name="resolution" value="0.1"/>
+  </node> -->
+
+  <!-- <node name="semantic_octomap_node" pkg="semantic_octomap_ros" type="semantic_octomap_node" output="screen">
+    <param name="frame_id" value="map"/>
+    <param name="resolution" value="0.5"/>
+  </node> -->
+
+  
+  <!-- <node pkg="dummy_vlm" type="run.py" name="run_script" output="screen"/> -->
+    <!-- <param name="frame_id" value="map"/>
+  </node> -->
+
+  <node pkg="dummy_vlm" type="run.py" name="run_script" output="screen">
+    <!-- You can add parameters here if needed -->
+    <!-- <param name="example_param" type="string" value="example_value"/> -->
   </node>
 
 </launch>
